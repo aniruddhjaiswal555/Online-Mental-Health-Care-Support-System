@@ -1,0 +1,41 @@
+.issue-container {
+    margin: 20px; /* Space around the issue container */
+    margin-top:4%;
+    background-color: #1c1c1c; /* Shiny black color for the background */
+    border-radius: 10px; /* Rounded corners for the container */
+    padding: 15px; /* Padding inside the container */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Stronger shadow for depth */
+}
+
+.issue-header {
+    cursor: pointer; /* Change cursor on hover */
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    color: #ffffff; /* White text color for better contrast */
+}
+
+.toggle-icon {
+    margin-right: 10px; /* Space between icon and title */
+}
+
+.issue-header h3 {
+    margin: 0; /* Remove default margin */
+    font-size: 1.5em; /* Increase font size */
+    color: #ffffff; /* White text color for header */
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
+    gap: 20px; /* Space between cards */
+    margin-top: 20px; /* Space above the card grid */
+}
+
+.issue-header.active {
+    font-weight: bold; /* Make header bold when active */
+}
+
+/* Additional styles for improved aesthetics */
+.issue-content {
+    padding: 10px; /* Padding for content */
+}

@@ -1,0 +1,89 @@
+.chat-container {
+    display: flex;
+    height: calc(100vh - 60px); /* Adjust height based on Navbar height */
+    margin-top: 20px; /* Add margin to create space below the Navbar */
+}
+
+.patient-list {
+    width: 30%; /* Adjust width as necessary */
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-right: 1px solid #ddd;
+    overflow-y: auto; /* Allow scrolling if too many patients */
+}
+
+.patient-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.patient-list li {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.patient-list li:hover {
+    background-color: #ddd; /* Highlight on hover */
+}
+
+.chat-window {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: white;
+}
+
+.messages {
+    flex-grow: 1;
+    overflow-y: auto; /* Scrollable area for messages */
+    margin-bottom: 10px;
+}
+
+.messages .therapist {
+    text-align: right;
+    background-color: #e1f5fe; /* Different color for therapist messages */
+    padding: 5px;
+    border-radius: 10px;
+    margin: 5px 0;
+}
+
+.messages .patient {
+    text-align: left;
+    background-color: #ffe0b2; /* Different color for patient messages */
+    padding: 5px;
+    border-radius: 10px;
+    margin: 5px 0;
+}
+
+.chat-input {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.chat-input input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.chat-input button {
+    padding: 10px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+
+.end-chat {
+    margin-top: 10px;
+    background-color: #f44336; 
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

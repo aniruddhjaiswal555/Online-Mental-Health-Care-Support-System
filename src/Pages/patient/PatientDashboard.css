@@ -1,0 +1,94 @@
+/* Global styles for body and html to enable scrolling */
+html, body {
+    height: 100%; /* Ensure full height */
+    margin: 0;    /* Remove default margin */
+    padding: 0;   /* Remove default padding */
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Dashboard content */
+.dashboard-content {
+    margin-left: 10px;
+    padding: 20px;
+    background-color: #ecf0f1;
+    height: 100vh; /* Make sure content takes the full height */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+/* Message box container styles */
+.message-box, .additional-message-box {
+    width: 100%; /* Full width within the container */
+    max-width: 600px; /* Set a maximum width for better readability */
+    padding: 20px; /* Consistent padding for equal spacing inside */
+    background-color: #f5f5f5; /* Background color for better visibility */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
+    text-align: left; /* Align text consistently */
+}
+
+/* Message container for equal spacing */
+.message-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    margin-left: 0; /* Remove any left margin */
+}
+.message-container
+{
+    margin-left: -69%;
+}
+/* Image deck container styling */
+.image-deck-container {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    margin-top: -30px;
+    margin-left: 220px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Image card styling */
+.image-card {
+    position: absolute;
+    margin-left: 630%;
+    margin-top: -170%;
+    width: 250%;
+    height: 225%;
+    border: 2px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Image card active state */
+.image-card.active {
+    transform: scale(1.05);
+    z-index: 1;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Image inside the card */
+.image-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Assurance message styling */
+.assurance-message {
+    margin-top: 20px;
+}
+
+/* Quote headline styling */
+.quote-headline,
+.quote-footline {
+    text-align: center;
+    color: #34495e;
+    margin: 15px 0;
+    font-size: 1.5em;
+    font-weight: bold;
+}

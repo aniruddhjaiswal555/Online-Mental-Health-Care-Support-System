@@ -1,0 +1,212 @@
+.messages-container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    position: relative;
+    background-image: url('../../assets/message-chat.avif');
+    background-size: cover;
+    background-position: left center;
+    overflow: hidden;
+}
+.therapist-list {
+    width: 30%;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    overflow-y: auto;
+    position: relative;
+    transition: transform 0.3s;
+}
+.therapist-header {
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: #333;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.search-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    transition: border-color 0.3s;
+}
+.search-input:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+.therapist-items {
+    list-style: none;
+    padding: 0;
+}
+.therapist {
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    background-color: #ffffff;
+    transition: background-color 0.3s, transform 0.3s;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1.1em;
+    color: #333;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+.therapist:hover {
+    background-color: #e0f7fa;
+    transform: scale(1.02);
+}
+.therapist:active {
+    transform: scale(0.98);
+}
+.welcome-message {
+    text-align: center;
+    font-size: 1.5em;
+    color: white;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    margin-top: 50px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+.chat-area {
+    width: 70%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s;
+}
+.chat-area.visible {
+    opacity: 1;
+}
+.chat-area.hidden {
+    opacity: 0;
+}
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.chat-messages {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-bottom: 10px;
+}
+.message {
+    padding: 10px;
+    border-radius: 5px;
+    margin-left: 500px;
+    margin-bottom: 10px;
+    max-width: 70%;
+    word-wrap: break-word;
+}
+.message.therapist {
+    background-color: #d1f8e4;
+    align-self: flex-start;
+}
+.message.patient {
+    background-color: #e1f5fe;
+    align-self: flex-end;
+}
+.message-input-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+.message-input {
+    flex-grow: 1;
+    height: 50px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+.send-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+.send-button img {
+    width: 60px;
+    height: 45px;
+}
+.feedback-popup {
+    position: fixed; /* Fixed position for popup */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center the popup */
+    background: linear-gradient(145deg, #ffffff, #f9f9f9); /* Gradient background */
+    border-radius: 12px; /* Rounded corners */
+    padding: 30px; /* Padding inside popup */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    z-index: 1000; /* High z-index to stay on top */
+    width: 400px; /* Fixed width for consistency */
+    max-width: 90%; /* Responsive max-width */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.feedback-popup h2 {
+    margin-bottom: 20px; /* Spacing below header */
+    font-size: 1.5em; /* Increased font size */
+    color: #333; /* Dark text color */
+    font-weight: bold; /* Bold font */
+    text-align: center; /* Center align */
+}
+
+.feedback-popup textarea {
+    width: 100%; /* Full width */
+    height: 100px; /* Height of feedback area */
+    padding: 12px; /* Padding inside textarea */
+    border: 1px solid #ddd; /* Border for textarea */
+    border-radius: 8px; /* Rounded edges */
+    margin-bottom: 20px; /* Spacing below textarea */
+    font-size: 1em; /* Font size */
+    resize: none; /* Disable resizing */
+    transition: border 0.3s; /* Transition for border color */
+}
+
+.feedback-popup textarea:focus {
+    border-color: #007BFF; /* Change border color on focus */
+    outline: none; /* Remove outline */
+}
+
+.feedback-popup button {
+    background-color: #007BFF; /* Primary button color */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 20px; /* Padding for buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 1em; /* Font size */
+    transition: background-color 0.3s, transform 0.3s; /* Transition effects */
+}
+
+.feedback-popup button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+.feedback-popup button:focus {
+    outline: none; /* Remove outline */
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5); /* Outline on focus */
+}
+
+.feedback-popup button:last-child {
+    background-color: #dc3545; /* Danger button color */
+    margin-left: 10px; /* Spacing between buttons */
+}
+
+.feedback-popup button:last-child:hover {
+    background-color: #c82333; /* Darker shade on hover */
+}

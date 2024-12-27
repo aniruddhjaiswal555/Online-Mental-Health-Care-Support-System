@@ -1,0 +1,161 @@
+.resource-manage-container {
+  padding: 20px;
+  background-color: #f4f7fc;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.resource-manage-container h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tab-btn {
+  background-color: #e0e0e0;
+  color: #333;
+  border: 1px solid #ccc;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin: 0 10px;
+  transition: background-color 0.3s ease;
+}
+
+.tab-btn.active {
+  background-color: #3b5998;
+  color: white;
+}
+
+.tab-btn:hover {
+  background-color: #ddd;
+}
+
+.resource-table {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+}
+
+.resource-table h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #3b5998;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+table th, table td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ccc;
+}
+
+table th {
+  background-color: #f0f4f8;
+  color: #666;
+  font-weight: bold;
+}
+
+table tr {
+  transition: background-color 0.3s ease;
+}
+
+table tr:hover {
+  background-color: #f9f9f9;
+}
+
+button.save-btn, button.cancel-btn, button.edit-btn, button.delete-btn, button.confirm-btn {
+  padding: 8px 12px; /* Ensure all buttons have equal padding */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 5px;
+  width: 100px; /* Fixed width for consistency */
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+button.save-btn:focus, button.cancel-btn:focus, button.edit-btn:focus, button.delete-btn:focus, button.confirm-btn:focus {
+  box-shadow: 0 0 0 3px rgba(67, 167, 255, 0.6);
+}
+
+button.save-btn {
+  background-color: #4caf50; /* Green color for save */
+  color: white;
+}
+
+button.cancel-btn {
+  background-color: #f0ad4e; /* Amber color for cancel */
+  color: white;
+}
+
+button.edit-btn {
+  background-color: #4caf50; /* Green color for edit */
+  color: white;
+}
+
+button.delete-btn {
+  background-color: #f44336; /* Red color for delete */
+  color: white;
+}
+
+button.confirm-btn {
+  background-color: #4caf50; /* Green color for confirm */
+  color: white;
+}
+
+button.save-btn:hover, button.edit-btn:hover, button.confirm-btn:hover {
+  background-color: #45a049; /* Darker green for hover */
+}
+
+button.cancel-btn:hover {
+  background-color: #ec971f; /* Darker amber for hover */
+}
+
+button.delete-btn:hover {
+  background-color: #e53935; /* Darker red for hover */
+}
+
+.delete-confirm-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.delete-confirm-container button {
+  width: 45%; /* Adjust width to make them same size */
+  margin: 0 10px; /* Provide space between the buttons */
+}
+
+@media (max-width: 768px) {
+  .resource-tables {
+    flex-direction: column;
+  }
+
+  .resource-table {
+    width: 100%;
+  }
+
+  .delete-confirm-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .delete-confirm-container button {
+    width: 80%; 
+    margin-bottom: 10px;
+  }
+}

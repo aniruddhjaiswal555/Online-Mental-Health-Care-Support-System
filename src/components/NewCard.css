@@ -1,0 +1,74 @@
+.new-card {
+    background-color: #e9f1ff; /* Light blue for a soft, professional look */
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15), 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #cfe2ff; /* Light blue border */
+}
+
+.new-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2), 0 6px 10px rgba(0, 0, 0, 0.12);
+}
+
+.image-box {
+    width: 100%;
+    height: 160px;
+    overflow: hidden;
+    border-radius: 8px;
+    position: relative;
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+    border-radius: 8px;
+}
+
+.new-card:hover .image-box img {
+    transform: scale(1.08);
+}
+
+.card-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #003366; /* Dark navy blue for a professional tone */
+    margin: 15px 0 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.card-content {
+    font-size: 1rem;
+    color: #333; /* Darker grey for improved readability */
+    margin: 0;
+    line-height: 1.6;
+    padding: 0 12px;
+    text-align: center;
+}
+
+.new-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 51, 102, 0.1); /* Very light navy overlay */
+    border-radius: 12px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.new-card:hover::before {
+    opacity: 1;
+}

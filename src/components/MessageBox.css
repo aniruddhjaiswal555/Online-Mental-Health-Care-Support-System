@@ -1,0 +1,112 @@
+.message-box {
+    background-color: #1abc9c; 
+    border-radius: 10px; 
+    padding: 20px; 
+    position: relative; 
+    margin-left:16px;
+    margin-top: 20px; 
+    color: black; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); 
+    max-width: 600px; 
+    height: auto; 
+    min-height: 80px; 
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+    animation: fadeIn 0.5s ease; 
+}
+
+.message-box:hover {
+    background-color: #16a085; 
+    transform: translateY(-5px); 
+}
+
+
+.message-content {
+    position: relative; 
+}
+
+.message-box::after {
+    content: '';
+    position: absolute;
+    bottom: 100%; 
+    left: 20px; 
+    margin-left: -10px; 
+    border-width: 10px; 
+    border-style: solid; 
+    border-color: transparent transparent #1abc9c transparent; 
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0; 
+        transform: translateY(-10px); 
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); 
+    }
+}
+
+
+@media (max-width: 400px) {
+    .message-box {
+        max-width: 90%; 
+    }
+}
+.additional-message-box {
+    background-color: #8e44ad; 
+    border-radius: 10px; 
+    padding: 20px; 
+    position: relative; 
+    margin: 20px; 
+    color: white; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); 
+    max-width: 600px; 
+    height: auto; 
+    min-height: 80px; 
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+    animation: fadeIn 0.5s ease; 
+}
+
+.additional-message-box:hover {
+    background-color: #732d91; 
+    transform: translateY(-5px); 
+}
+
+.additional-message-box::after {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 20px; 
+    margin-left: -10px; 
+    border-width: 10px; 
+    border-style: solid; 
+    border-color: transparent transparent #8e44ad transparent; 
+}
+.assurance-message {
+    background-color: #3498db; 
+    border-radius: 10px; 
+    padding: 20px; 
+    position: relative; 
+    color: black; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); 
+    max-width: 600px; 
+    min-height: 80px; 
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+    animation: fadeIn 0.5s ease; 
+}
+
+.assurance-message:hover {
+    background-color: #2980b9; 
+    transform: translateY(-5px); 
+}
+
+.assurance-message::after {
+    content: '';
+    position: absolute;
+    bottom: 100%; 
+    left: 20px; 
+    margin-left: -10px; 
+    border-width: 10px; 
+    border-style: solid; 
+    border-color: transparent transparent #3498db transparent; 
+}
+

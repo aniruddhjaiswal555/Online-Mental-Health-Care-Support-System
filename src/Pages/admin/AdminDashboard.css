@@ -1,0 +1,18 @@
+.dashboard {
+  text-align: center;
+}
+
+.dashboard-heading {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.cards-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap; 
+  justify-content: center; 
+  align-items: center; 
+  width: 100%;
+}
